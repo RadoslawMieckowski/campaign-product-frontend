@@ -7,13 +7,15 @@ import { CampaignListComponent } from './campaign-list/campaign-list.component';
 import { CreateCampaignComponent } from './create-campaign/create-campaign.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateCampaignComponent } from './update-campaign/update-campaign.component';
+import { CampaignDetailsComponent } from './campaign-details/campaign-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CampaignListComponent,
     CreateCampaignComponent,
-    UpdateCampaignComponent
+    UpdateCampaignComponent,
+    CampaignDetailsComponent
   ],
   imports: [
     BrowserModule,

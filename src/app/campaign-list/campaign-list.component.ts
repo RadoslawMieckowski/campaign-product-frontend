@@ -37,4 +37,8 @@ export class CampaignListComponent implements OnInit {
     })
   }
 
+  campaignDetails(id:number){
+    this.router.navigate(['campaign-details',id]);
+  }
+
 }
