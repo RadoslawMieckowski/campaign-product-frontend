@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Campaign } from '../campaign';
 import { CampaignService } from '../campaign.service';
 
@@ -10,7 +11,7 @@ import { CampaignService } from '../campaign.service';
 export class CampaignListComponent implements OnInit {
 
   campaignes:Campaign[];
-  constructor(private campaignService:CampaignService) { }
+  constructor(private campaignService:CampaignService, private router:Router) { }
 
   ngOnInit(): void {
    this.getCampaignes();
@@ -22,6 +23,9 @@ export class CampaignListComponent implements OnInit {
       this.campaignes=data;
       console.log(this.campaignes);
     })
+  }
+  updateCampaign(id:number){
+    this.router.navigate(['update-campaign',id]);
   }
 
 }
