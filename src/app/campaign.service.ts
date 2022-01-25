@@ -16,4 +16,7 @@ private baseURL="http://localhost:8080/api/v1/campaignes";
     return this.httpClient.get<Campaign[]>(`${this.baseURL}`);
   }
   
+  createCampaign(campaign:Campaign):Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`,campaign);
+  }
 }
