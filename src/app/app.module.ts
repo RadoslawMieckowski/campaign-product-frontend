@@ -4,11 +4,13 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
+import { CreateCampaignComponent } from './create-campaign/create-campaign.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CampaignListComponent
+    CampaignListComponent,
+    CreateCampaignComponent
   ],
   imports: [
     BrowserModule,
