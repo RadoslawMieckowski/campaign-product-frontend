@@ -28,4 +28,13 @@ export class CampaignListComponent implements OnInit {
     this.router.navigate(['update-campaign',id]);
   }
 
+
+  deleteCampaign(id:number){
+    this.campaignService.deleteCampaign(id)
+    .subscribe((data)=>{
+      console.log(data);
+      this.getCampaignes();
+    })
+  }
+
 }

@@ -28,5 +28,8 @@ private baseURL="http://localhost:8080/api/v1/campaignes";
     return this.httpClient.put(`${this.baseURL}/${id}`, campaign);
   }
 
+  deleteCampaign(id:number):Observable<Object>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
   
 }
