@@ -37,10 +37,15 @@ export class UpdateCampaignComponent implements OnInit {
   }
 
   onSubmit(){
-    this.updateCampaign();
-    this.goToCampaignList();
+    if(this.campaign.name==''||this.campaign.keywords==''||this.campaign.bidAmount==undefined||
+    this.campaign.fund==undefined||this.campaign.town==''||this.campaign.radius==undefined){
+      alert("name, keywords, bid amount, fund, town, radius must be specified!")
+    }else{
+      this.updateCampaign();
+      this.goToCampaignList();
+    }
   }
-
+ 
   goToCampaignList(){
     this.router.navigate(['/campaignes']);
   }

@@ -31,7 +31,13 @@ constructor(private campaignService:CampaignService, private router:Router) { }
   }
 
   onSubmit(){
-    console.log(this.campaign);
-    this.saveCampaign();
+    if(this.campaign.name==''||this.campaign.keywords==''||this.campaign.bidAmount==undefined||
+    this.campaign.fund==undefined||this.campaign.town==''||this.campaign.radius==undefined){
+      alert("name, keywords, bid amount, fund, town, radius must be specified!")
+    }else{
+      console.log(this.campaign);
+      this.saveCampaign();
+    }
   }
+  
 }
